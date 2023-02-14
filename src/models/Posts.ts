@@ -1,18 +1,15 @@
-// Criando a classe com os constructors do Posts
+// Criando a classe com os constructors da tabela Users
 
 export class Posts {
     constructor(
-        private id: string,
-        private name: string,
-        private email: string,
-        private password: string,
-        private role: string,
-        private createdAt: string
+        private id: string, 
+        private creatorId: string, 
+        private content: string, 
+        private likes: boolean, 
+        private dislikes: boolean, 
+        private createdAt: string, 
+        private updatedAt: string
     ) {}
-
-// Os métodos 'get' e 'set' acessam e alteram/inserem informações da classe. 
-
-    // Para ID
 
     public getId(): string {
         return this.id
@@ -22,50 +19,48 @@ export class Posts {
         this.id = value
     }
 
-    // Para Name
-
-    public getName(): string {
-        return this.name
+    public getcreatorId(): string {
+        return this.creatorId
     }
 
-    public setName(value: string): void {
-        this.name = value
+    public setcreatorId(value: string): void {
+        this.creatorId = value
     }
 
-    // Para E-mail
-
-    public getEmail(): string {
-        return this.email
+    public getContent(): string {
+        return this.content
     }
 
-    public setEmail(value: string): void {
-        this.email = value
+    public setContent(value: string): void {
+        this.content = value
     }
 
-    // Para Password
-
-    public getPassword(): string {
-        return this.password 
+    public getLikes(): boolean {
+        return this.likes
     }
 
-    public setPassword(value: string): void {
-        this.password = value
+    public setLikes(value: boolean): void {
+        this.likes = value
     }
 
-    // Para role
-
-    public getRole(): string {
-        return this.role
+    public getDislikes(): boolean {
+        return this.dislikes
     }
 
-    public setRole(value: string): void {
-        this.role = value
+    public setDislikes(value: boolean): void {
+        this.dislikes = value
     }
 
-    // Para Created_at
+    public getUpdatedAt(): string {
+        return this.updatedAt
+    }
+
+    public setUpdatedAt(value: string): void {
+        this.updatedAt = value
+    }
 
     public getCreatedAt(): string {
-        return this.createdAt 
+        return this.createdAt
     }
 
     public setCreatedAt(value: string): void {
