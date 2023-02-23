@@ -16,3 +16,9 @@ export interface PostsDB {
     created_at: string, 
     updated_at: string
 }
+
+export interface TokenPayload {
+    id: string,
+	name: string,
+    role: USER_ROLES
+}
