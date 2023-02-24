@@ -1,4 +1,4 @@
-// Criando a classe com os constructors da tabela Users
+// Criando a classe com os constructors da tabela Posts
 import { PostsDB, PostsModel } from "../types"
 
 export class Posts {
