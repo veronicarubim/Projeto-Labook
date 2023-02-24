@@ -1,14 +1,16 @@
 // Criando a classe com os constructors da tabela Users
+import { PostsDB, PostsModel } from "../types"
 
 export class Posts {
     constructor(
         private id: string, 
-        private creatorId: string, 
         private content: string, 
-        private likes: boolean, 
-        private dislikes: boolean, 
+        private likes: number, 
+        private dislikes: number, 
         private createdAt: string, 
-        private updatedAt: string
+        private updatedAt: string,
+        private creatorId: string,
+        private creatorName: string
     ) {}
 
     public getId(): string {
@@ -35,19 +37,19 @@ export class Posts {
         this.content = value
     }
 
-    public getLikes(): boolean {
+    public getLikes(): number {
         return this.likes
     }
 
-    public setLikes(value: boolean): void {
+    public setLikes(value: number): void {
         this.likes = value
     }
 
-    public getDislikes(): boolean {
+    public getDislikes(): number {
         return this.dislikes
     }
 
-    public setDislikes(value: boolean): void {
+    public setDislikes(value: number): void {
         this.dislikes = value
     }
 
@@ -67,4 +69,32 @@ export class Posts {
         this.createdAt = value
     }
 
-};
+    public toDBModel(): PostsDB {
+        return {
+         id: this.id, 
+         creator_id: this.creatorId, 
+         content: this.content, 
+         likes: this.likes, 
+         dislikes: this.dislikes, 
+         created_at: this.createdAt, 
+         updated_at: this.updatedAt
+        }
+    }
+
+    public toBusinessModel(): PostsModel {
+        return {
+            id: this.id,
+            content: this.content,
+            likes: this.likes,
+            dislikes: this.dislikes,
+            createdAt: this.createdAt,
+            updatedAt: this.updatedAt,
+            creator: {
+                id: this.creatorId,
+                name: this.creatorName }
+                }
+    }
+
+
+}
+
