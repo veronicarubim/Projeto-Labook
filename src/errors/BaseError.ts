@@ -1,9 +1,8 @@
-import { BaseError } from "./BaseError";
-
-export class BadRequestError extends BaseError {
+export abstract class BaseError extends Error {
     constructor(
-        message: string = "Requisição inválida"
+        public statusCode: number,
+        message: string
     ) {
-        super(400, message)
+        super(message)
     }
 }
