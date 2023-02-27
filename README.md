@@ -36,13 +36,13 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone 'link do repositório'
+$ git clone https://github.com/veronicarubim/Projeto-Labook.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+$ cd Projeto-Labook
 
 # Vá para a pasta server
-$ cd server
+$ cd server Projeto-Labook
 
 # Instale as dependências
 $ npm install
@@ -50,7 +50,7 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev:server
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+# O servidor inciará na porta:3003 - acesse <http://localhost:3003>
 ```
 
 # Ajuda
