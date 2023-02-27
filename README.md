@@ -6,13 +6,13 @@
 
 Em andamento - Não finalizado
 
-#Descrição:
+# Descrição:
 
 O Projeto Labook - Backend é uma API de rede social desenvolvida durante o Bootcamp na Labenu, os usuários cadastrados podem criar e curtir publicaçoes. O objetivo principal da aplicação é promover a integração e conexão entre os usuários.
 
 O projeto em si teve como objetivo praticar a criação de APIs vinculadas a banco de dados relacional SQL, praticar padrões de design, arquitetura e programação orientada a objetos, além de incentivar boas práticas e código limpo. A API também contém métodos de autenticação, criação de usuários a partir de Tokens e hasheamento de senhas.
 
-#Funcionaliddades e Ferramentas:
+# Funcionaliddades e Ferramentas:
 
 * NodeJS
 * Typescript
@@ -27,7 +27,7 @@ O projeto em si teve como objetivo praticar a criação de APIs vinculadas a ban
 * Roteamento
 * Postman
 
-#🎲 Como utilizar a aplicação:
+# 🎲 Como utilizar a aplicação:
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
@@ -53,10 +53,10 @@ $ npm run dev:server
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
 
-#Ajuda
+# Ajuda
 
 Caso tenha surgido alguma dúvida, entre em contato comigo pelo linkedin clicando <a href="https://www.linkedin.com/in/veronica-rubim-0b0b87169/">aqui</a>
 
-#Autores
+# Autores
 
 Veronica Rubim
