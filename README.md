@@ -32,3 +32,31 @@ O projeto em si teve como objetivo praticar a criação de APIs vinculadas a ban
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/veronicarubim/Projeto-Labook.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Projeto-Labook
+
+# Vá para a pasta server
+$ cd server Projeto-Labook
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# O servidor inciará na porta:3003 - acesse <http://localhost:3003>
+```
+
+# Ajuda
+
+Caso tenha surgido alguma dúvida, entre em contato comigo pelo linkedin clicando <a href="https://www.linkedin.com/in/veronica-rubim-0b0b87169/">aqui</a>
+
+# Autores
+
+Veronica Rubim
