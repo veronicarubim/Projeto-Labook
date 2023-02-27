@@ -8,7 +8,7 @@ export interface UserDB {
     name: string,
     email: string,
     password: string,
-    role: string,
+    role: USER_ROLES,
     created_at: string
 }
 
@@ -17,7 +17,7 @@ export interface UserModel {
     name: string,
     email: string,
     password: string,
-    role: string,
+    role: USER_ROLES,
     createdAt: string
 }
 
@@ -29,6 +29,10 @@ export interface PostsDB {
     dislikes: number, 
     created_at: string, 
     updated_at: string
+}
+
+export interface PostsWithCreatorsDB extends PostsDB {
+    creator_name: string,
 }
 
 /* Criando o tipo PostsModel porque será retornado no FrontEnd: */

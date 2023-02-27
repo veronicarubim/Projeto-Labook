@@ -20,7 +20,7 @@ export class Users {
         return this.id
     }
 
-    public setId(value: string): void {
+    public setId(value: string) {
         this.id = value
     }
 
@@ -30,7 +30,7 @@ export class Users {
         return this.name
     }
 
-    public setName(value: string): void {
+    public setName(value: string) {
         this.name = value
     }
 
@@ -40,7 +40,7 @@ export class Users {
         return this.email
     }
 
-    public setEmail(value: string): void {
+    public setEmail(value: string) {
         this.email = value
     }
 
@@ -50,7 +50,7 @@ export class Users {
         return this.password 
     }
 
-    public setPassword(value: string): void {
+    public setPassword(value: string) {
         this.password = value
     }
 
@@ -60,7 +60,7 @@ export class Users {
         return this.role
     }
 
-    public setRole(value: USER_ROLES): void {
+    public setRole(value: USER_ROLES) {
         this.role = value
     }
 
@@ -70,7 +70,7 @@ export class Users {
         return this.createdAt 
     }
 
-    public setCreatedAt(value: string): void {
+    public setCreatedAt(value: string) {
         this.createdAt = value
     }
 

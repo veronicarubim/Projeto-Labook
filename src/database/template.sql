@@ -1,13 +1,13 @@
--- Active: 1677180178781@@127.0.0.1@3306
+-- Active: 1677468919078@@127.0.0.1@3306
 
 /* Criando a tabela users: */
 
 CREATE TABLE users (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     name TEXT NOT NULL,
-    email TEXT NOT NULL,
-    password TEXT NOT NULL, 
-    role TEXT NOT NULL, 
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    role TEXT NOT NULL,
     created_at TEXT DEFAULT (DATETIME()) NOT NULL
 );
 
@@ -80,7 +80,18 @@ SELECT * FROM posts;
 
 SELECT * FROM likes_dislikes;
 
-
+SELECT 
+    posts.id,
+    posts.creator_id,
+    posts.content,
+    posts.likes,
+    posts.dislikes, 
+    posts.created_at,
+    posts.updated_at,
+    users.name AS creator_name,
+FROM posts
+JOIN users
+ON posts.creator_id = users.id
 
 /* Excluindo as tabelas caso dê algum bug: */
 
