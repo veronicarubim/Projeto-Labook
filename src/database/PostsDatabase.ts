@@ -1,4 +1,4 @@
-import { PostsDB } from "../types";
+import { PostsDB, PostsWithCreatorsDB } from "../types";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class PostsDatabase extends BaseDatabase {
@@ -12,4 +12,23 @@ export class PostsDatabase extends BaseDatabase {
 
         return postDB
     }
+
+    public getPostsWithCreators = async () => {
+        const result: PostsWithCreatorsDB[] = await BaseDatabase
+        .connection(PostsDatabase.TABLE_POSTS)
+        .select(
+            "posts.id",
+            "posts.creator_id",
+            "posts.content",
+            "posts.likes",
+            "posts.dislikes", 
+            "posts.created_at",
+            "posts.updated_at",
+            "users.name AS creator_name",
+        )
+        .join("posts.creator_id","=","users.id")
+
+        return result
+        
+    } 
 }
