@@ -97,6 +97,8 @@ export class UserBusiness {
         const isPasswordCorrect = await this.hashManager
         .compare(password, hashedPassword)
 
+        console.log(password)
+
         if (!isPasswordCorrect) {
             throw new BadRequestError ('Senha incorreta')
         }

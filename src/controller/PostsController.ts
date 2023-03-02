@@ -15,8 +15,9 @@ export class PostsController {
             }
 
             const output = await this.postsBusiness.getPosts(input)
-
+        
             res.status(200).send(output)
+            
 
         } catch (error) {
             if (error instanceof BaseError) {
@@ -31,12 +32,12 @@ export class PostsController {
         try {
             const input: CreatePostsInputDTO = {
                 token: req.headers.authorization,
-                content: req.body.name
+                content: req.body.content
             }
 
             await this.postsBusiness.createPosts(input)
 
-            res.status(201).end().send("Post criado com sucesso")
+            res.status(201).send("Post criado com sucesso").end()
 
         } catch (error) {
             if (error instanceof BaseError) {

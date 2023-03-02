@@ -1,4 +1,4 @@
--- Active: 1677468919078@@127.0.0.1@3306
+-- Active: 1677783473229@@127.0.0.1@3306
 
 /* Criando a tabela users: */
 
@@ -50,7 +50,7 @@ CREATE TABLE likes_dislikes (
 
 INSERT INTO users (id, name, email, password, role)
 VALUES 
-("u001", "jaskier", "jaskier@gmail.com", "123456", "NORMAL"),
+("u001", "jaskier", "jaskier@gmail.com", "$2a$12$jcZnGm89L4x7vplos/5YXOlbGifBUlzRgrcvefYdMWMfOIPk4ky/2", "NORMAL"),
 ("u002", "veronica", "veronica@gmail.com", "123456", "NORMAL"),
 ("u003", "marco", "marco@gmail.com", "123456", "NORMAL");
 
@@ -88,10 +88,10 @@ SELECT
     posts.dislikes, 
     posts.created_at,
     posts.updated_at,
-    users.name AS creator_name,
+    users.name AS creator_name
 FROM posts
 JOIN users
-ON posts.creator_id = users.id
+ON posts.creator_id = users.id;
 
 /* Excluindo as tabelas caso dê algum bug: */
 
