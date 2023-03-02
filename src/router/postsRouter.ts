@@ -17,3 +17,9 @@ const postsController = new PostsController(
 ) 
 
 postsRouter.get("/", postsController.getPosts)
+postsRouter.post("/", postsController.createPosts)
+
+/* Nesse caso, como é preciso que somente o dono do posts faça a edição, o params vem :id */
+postsRouter.put("/:id", postsController.editPosts)
+postsRouter.delete("/:id", postsController.deletePosts)
+postsRouter.put("/:id/like", postsController.likeOrDislikePosts)

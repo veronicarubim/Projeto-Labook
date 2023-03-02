@@ -45,7 +45,9 @@ permitindo que as informações sejam transmitidas de forma clara e eficiente.*/
 /* Create Posts */
 
   export interface CreatePostsInputDTO {
-    token: string | undefined
+    token: string | undefined,
+    content: string
+
   }
 
 /* Edit Posts */
@@ -54,15 +56,14 @@ permitindo que as informações sejam transmitidas de forma clara e eficiente.*/
   export interface EditPostsInputDTO {
     idToEdit: string,
     token: string | undefined,
-    name: unknown
+    content: string | unknown
   }
 
 /* Delete Posts */
 
   export interface DeletePostsInputDTO {
-    idToEdit: string,
-    token: string | undefined,
-    name: unknown
+    idToDelete: string,
+    token: string | undefined
   }
 
 /* Like ou Dislike Posts */
