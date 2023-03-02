@@ -17,3 +17,5 @@ app.listen(Number(process.env.PORT), () => {
 
 app.use("/users", userRouter)
 app.use("/posts", postsRouter)
+
+/* Fluxo de lógica: index > router > controller (requisições) > depois business (regras e verificações) e DTOs com as formas de input e output */
