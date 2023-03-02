@@ -28,7 +28,7 @@ export class PostsDatabase extends BaseDatabase {
             "posts.updated_at",
             "users.name AS creator_name",
         )
-        .join("posts.creator_id","=","users.id")
+        .join("users","posts.creator_id","=","users.id")
 
         return result
         

@@ -34,6 +34,8 @@ export class PostsBusiness {
         = await this.postsDatabase
             .getPostsWithCreators()
 
+            console.log(postsWithCreatorsDB)
+
         const posts = postsWithCreatorsDB.map(
             (postsWithCreatorsDB) => {
                 const posts = new Posts(
@@ -48,7 +50,7 @@ export class PostsBusiness {
                 )
 
                 return posts.toBusinessModel()
-
+                
         })
 
         const output: GetPostsOutputDTO = posts
@@ -94,9 +96,10 @@ export class PostsBusiness {
         )
 
         const postsDB = posts.toDBModel()
+        console.log(postsDB)
 
-        await this.postsDatabase.insert(postsDB)
-          
+       await this.postsDatabase.insert(postsDB)
+        
     }
 
     public editPosts = async (input: EditPostsInputDTO): Promise<void> => {
